@@ -36,7 +36,7 @@ def scrape_indeed(job_title, location):
                 "location": location
             })
 
-        # Check for next page
+
         next_page_link = soup.find("a", {"aria-label": "Next"})
         if next_page_link:
             next_page_url = "https://www.indeed.com" + next_page_link["href"]
@@ -47,7 +47,7 @@ def scrape_indeed(job_title, location):
 
     return jobs
 
-# Get user input for job title and location
+
 job_title = input("Enter the job title you want to search for: ")
 location = input("Enter the location you want to search in: ")
 
